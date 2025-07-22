@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparked - Heartbeat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="background-basic-black" id="rhythm-bg">
+    <div class="stats-text">
+        <p id="score-text"></p>
+        <p id="perfect-text"></p>
+        <p id="missed-text"></p>
+    </div>
+    <audio id="audio-tutorial" src="assets/audio-tutorial.mp3" ></audio>
+    <div class="center-vertically"><div id="rhythm-info-wrapper">
+        <p id="rhythm-info-wrapper-header">Heartbeat Minigame</p>
+        <a id="rhythm-play-button" class="rhythm-button" onclick="initTutorial()">Play</a>
+    </div></div>
+    <div id="def-hidden" style="display: none">
+        <div id="lanes">
+            <div id="lane1" class="lane"></div>
+            <div id="lane2" class="lane"></div>
+            <div id="lane3" class="lane"></div>
+            <div id="lane4" class="lane"></div>
+        </div>
+        <div id="timing-fields">
+            <div class="timing-field" id="tf1"><p class="tutorial-text">Press "d"</p></div>
+            <div class="timing-field" id="tf2"><p class="tutorial-text">Press "f"</p></div>
+            <div class="timing-field" id="tf3"><p class="tutorial-text">Press "J"</p></div>
+            <div class="timing-field" id="tf4"><p class="tutorial-text">Press "k"</p></div>
+        </div>
+    </div>
+    <script src="rhythm-script.js"></script>
+</body>
+</html>

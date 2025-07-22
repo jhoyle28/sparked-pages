@@ -1,0 +1,421 @@
+* {
+  box-sizing: border-box;
+}
+
+
+@font-face {
+  src: url("assets/main-font.ttf");
+  font-family: 'main-font';
+}
+
+.rhythm-info-wrapper {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  max-width: 30vw;
+  margin: auto;
+}
+
+.top-nav-content {
+  height: 70px;
+  filter: hue-rotate(120deg) saturate(50%);
+  opacity: 80%;
+}
+
+.pixel-art {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.nav-container {
+  background-color: rgba(226, 236, 255, 0.5);
+  justify-content: center;
+  text-align: center;
+}
+
+.header-img {
+  width: 400px;
+  margin-top: 12px;
+}
+
+h1 {
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  background-color: rgba(216, 214, 255, 0.5);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover; /* These three lines improve macos experience (i.e. stop "bouncing" when scrolling vertically) */
+  overscroll-behavior: none;
+  overflow: hidden; 
+  transition: background-color 1s ease; /* Makes it so background colour fades */
+}
+
+.translucent-on-hover:hover {
+  opacity: 50%;
+}
+
+.background-image-blue {
+  background-image: url("assets/screenshot-1.png");
+  background-color: rgb(71, 93, 126);
+}
+
+.background-basic-blue {
+  background-color: rgb(71, 93, 126);
+}
+
+.info-wrapper {
+  display: flex;
+  background-color: rgba(195, 192, 255, 0.5);
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: center;
+  width: 50%; 
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.info-text {
+  font-family: 'main-font', sans-serif;
+  text-align: center;
+  font-size: 30px;
+  padding: 0;
+}
+
+.stand-res-icon {
+  height: 75px;
+}
+
+.extras-icon {
+  /* Luc made this work, thanks Luc! */
+  margin-top: 15px;
+  margin-right: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.background-basic-black {
+  background-color: black;
+}
+
+.pixel-font {
+  font-family: "main-font", sans-serif;
+}
+
+.center-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.bottom-left-text {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: max-content; /* Makes it only as wide as the text */
+  margin-left: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.bottom-right-text {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: max-content; /* Same here */
+  margin-right: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.fade-5-second {
+  transition: opacity 1s ease;
+}
+
+@keyframes shake { /* A failed attempt at something... */
+  0% {transform: translate(1px, 1px) rotate(0deg); }
+  10% {transform: translate(-1px, 2px) rotate(-1deg); }
+  20% {transform: translate(-1px, -3px) rotate(1deg); }
+  30% {transform: translate(-1px, -2px) rotate(1deg); }
+  40% {transform: translate(2px, 2px) rotate(-2deg); }
+  50% {transform: translate(2px, -2px) rotate(1deg); }
+  60% {transform: translate(-4px, 4px) rotate(-2deg); }
+  70% {transform: translate(2px, -2px) rotate(2deg); }
+  80% {transform: translate(2px, -2px) rotate(-1deg); }
+  90% {transform: translate(-1px, 1px) rotate(2deg); }
+  100% {transform: translate(-1px, 1px) rotate(-1deg); }
+}
+
+.donate-icon {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 8px solid;
+  color: white;
+  max-width: 280px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'main-font', sans-serif;
+  padding: 7px;
+  font-size: 60px;
+  background-color: black;
+  border-image: linear-gradient(45deg,
+  green,
+  lightgreen,
+  blue,
+  lightblue) 1; /* Gradient border effect, found this online but didn't like it so I made my own version where I can edit the colours more easily. */
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#amount-display {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: 'main-font', sans-serif;
+  font-size: 30px;
+  color: rgb(190, 190, 255);
+}
+
+.shop-container {
+  image-rendering: pixelated; /*Decompresses the pixel art*/
+  image-rendering: crisp-edges;
+  background-size: 1000px;
+  background-image: url("assets/shop-background.png");
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+}
+
+.shop-heading {
+  font-size: 50px;
+  font-family: 'main-font', sans-serif;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.shop-item {
+  margin-left: 80px;
+  margin-right: 80px;
+  border: 10px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  background-color: rgba(195, 192, 255, 0.5);
+  cursor: pointer;
+}
+
+.shop-item-name {
+  font-size: x-large;
+  color: white;
+  font-family: 'main-font', sans-serif;
+  margin: 0;
+}
+
+.shop-item-description {
+  font-size: large;
+  color: white;
+  font-family: 'main-font', sans-serif;
+  margin: 0;
+}
+
+.shop-item-price {
+  font-size: 18px;
+  color: white;
+  font-family: 'main-font', sans-serif;
+  margin: 0;
+}
+
+#shop-items-container {
+  justify-content: center;
+  display: flex;
+}
+
+.scroll-button {
+  display: flex;
+  color: white;
+  font-family: 'main-font', sans-serif;
+  font-size: 80px;
+  background-color: rgb(194, 194, 255);
+  height: 1em;
+  width: 1em;
+  margin-right: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 10px solid black;
+  cursor: pointer;
+}
+
+.donations-stats-wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#stats-panel {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: 'main-font', sans-serif;
+  font-size: 30px;
+  color: aquamarine;
+}
+
+.slightly-translucent-on-hover:hover {
+  opacity: 80%;
+}
+
+iframe {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: calc(100vh - 220px);
+  width: calc(100vw - 250px);
+  overflow: hidden;
+  border: none;
+}
+
+.timing-fields {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  margin-bottom: 5vh;
+}
+
+.timing-field {
+  width: 8vw;
+  height: 8vw;
+  border: solid white 5px;
+}
+
+#lanes, #timing-fields {
+  position: fixed;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#lanes {
+  top: 0;
+}
+
+#timing-fields {
+  z-index: 1;
+  bottom: 5vh;
+}
+
+.lane {
+  z-index: 2;
+  width: 8vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  border-left: solid white 5px;
+  border-right: solid white 5px;
+}
+
+.note {
+  position: absolute;
+  top: -9vw;
+  left: 0;
+  width: 8vw;
+  height: 8vw;
+  max-height: 8vw;
+  border: solid white 5px;
+}
+
+.tutorial-text {
+  font-family: 'main-font', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+#rhythm-info-wrapper {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  border-radius: 5px;
+  max-width: 30vw;
+  margin: auto;
+  padding: 5px;
+}
+
+#rhythm-complete-wrapper {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  border-radius: 5px;
+  max-width: 30vw;
+  margin: auto;
+  padding: 5px;
+}
+
+.center-vertically {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+#rhythm-info-wrapper-header {
+  font-family: "main-font", sans-serif;
+  font-size: xx-large;
+}
+
+.rhythm-button {
+  display: flex;
+  font-family: "main-font", sans-serif;
+  font-size: x-large;
+  border-radius: 5px;
+  border: solid black 5px;
+  background-color: gray;
+  text-align: center;
+  width: 15vw;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#rhythm-play-button:hover {
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+.note1 { background-color: rgb(100, 0, 0) }
+.note2 { background-color: rgb(0, 0, 100); }
+.note3 { background-color: rgb(100, 100, 0); }
+.note4 { background-color: rgb(0, 100, 0);}
+
+.stats-text {
+  font-family: 'main-font', sans-serif;
+  color: white;
+  font-size: x-large;
+  margin-left: 10px;
+}
